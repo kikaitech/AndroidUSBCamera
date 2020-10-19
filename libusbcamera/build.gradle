@@ -3,12 +3,12 @@ apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.jiangdongguo'
 
 android {
-    compileSdkVersion rootProject.ext.versionCompiler
+    compileSdkVersion 28
     defaultConfig {
-        minSdkVersion rootProject.ext.minSdkVersion
-        targetSdkVersion rootProject.ext.versionTarget
+        minSdkVersion 21
+        targetSdkVersion 27
         versionCode 2
-        versionName rootProject.ext.versionNameString
+        versionName "1.2.1.20200414"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         // "armeabi-v7a" can adapter most of the devices
@@ -24,8 +24,8 @@ android {
     }
     // solving com.android.tools.r8.CompilationFailedException: Compilation failed to complete
     compileOptions {
-        sourceCompatibility rootProject.ext.javaSourceCompatibility
-        targetCompatibility rootProject.ext.javaTargetCompatibility
+        sourceCompatibility rootProject.ext.sourceCompatibility
+        targetCompatibility rootProject.ext.targetCompatibility
     }
 }
 
@@ -33,6 +33,6 @@ android {
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
 
-    implementation "androidx.appcompat:appcompat:${androidXVersion}"
-    api "com.serenegiant:common:${commonLibVersion}"
+    implementation "androidx.appcompat:appcompat:1.1.0"
+    api "com.serenegiant:common:4.1.1"
 }

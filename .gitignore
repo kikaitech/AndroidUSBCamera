@@ -5,7 +5,9 @@
 /.idea/libraries
 .idea
 .DS_Store
-/build
+build/
 /captures
 .externalNativeBuild
 .tags*
+
+node_modules/
